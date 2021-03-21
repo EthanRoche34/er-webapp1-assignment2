@@ -1,0 +1,20 @@
+<form class="ui stacked segment form" action="/category/{{category.id}}/addgame" method="POST">
+  <div class="three fields">
+    <div class="field">
+      <label for="title">Title</label>
+      <input type="text" name="title" autofocus required title = "Please include a valid Title"
+      placeholder="Title">
+    </div>
+    <div class="field">
+      <label for="developer">Developer</label>
+      <input type="text" name="developer" required title = "Please include a valid developer"
+      placeholder="Developer"  >
+    </div>
+    <div class="field">
+      <label for="release">Release</label>
+      <input type="text" id="datepicker" name="release" required title = "Please include a release date"
+      placeholder="Release Date">
+    </div>
+  </div>
+  <button class="ui blue submit button">Add game</button>
+</form>

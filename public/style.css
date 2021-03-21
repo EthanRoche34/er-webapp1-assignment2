@@ -1,0 +1,77 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #131313;
+  color: #f0f0f0;
+  text-align: center;
+}
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+.ui.menu {
+  background-color: #323232;
+}
+#readmore {
+  display: none;
+}
+#welcomeuser {
+  display: none;
+}
+.ui.segment {
+  background-color: #3D3D3D;
+}
+header.ui.header.item a{
+  color: aqua;
+}
+h2 {
+  color: #BB86FC;
+}
+.trademark {
+  display: block;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#map img{
+  align-content: center;
+  width: 100%;
+}
+#map figcaption{
+  text-align: center;
+}
+#dashboard,#about {
+  color: #f0f0f0;
+}
+.ui.button#atlusBlue {
+  background-color: transparent;
+  color: #125FAD;
+  box-shadow: 0 0 0 2px #125FAD inset!important;
+  -webkit-box-shadow: 0 0 0 2px #125FAD inset!important;
+}
+.ui.button#atlusBlue:hover{
+  background-color: #125FAD;
+  color: #fff;
+  box-shadow: none!important;
+}
+.ui.button#atlusRed {
+  background-color: transparent;
+  color: #E70012;
+  box-shadow: 0 0 0 2px #E70012 inset!important;
+  -webkit-box-shadow: 0 0 0 2px #E70012 inset!important;
+}
+.ui.button#atlusRed:hover{
+  background-color: #E70012;
+  color: #fff;
+  box-shadow: none!important;
+}
+h2.ui.header {
+  color: #f0f0f0;
+}
+.ui.form .field>label {
+  color: #f0f0f0;
+}

@@ -1,0 +1,59 @@
+{{> menu}}
+
+<section class="ui container">
+
+      <section class="ui grid segment">
+        <div class="ui column">
+          <h2>Welcome to the RPG Archives App!</h2>
+
+          <div class="ui column">
+          <div class="ui grid">
+            <div class="ui middle aligned eight wide column">
+              <img
+                class="ui centered small image"
+                src="https://i.imgur.com/emVBJna.png"
+                alt="Atlus Games Logo"
+              />
+            </div>
+             <div class="ui middle aligned eight wide column">
+              <img
+                class="ui centered medium image"
+                src="https://i.imgur.com/8Z1QCn2.png"
+                alt="Square Enix logo"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="ui hidden divider"></div>
+        <div class="ui hidden divider"></div>
+          <p>
+            This app will allow users to create and maintain a collection of different 
+            RPG's (Role Playing Games) of different subgeneres.
+          </p>
+          <div class="ui hidden divider"></div>
+          <div class="ui hidden divider"></div>
+          <div class="buttons">
+            <button class="ui inverted button" id="atlusBlue" onclick="showHide()">
+              Read more <i class="arrow circle right icon"></i>
+            </button>
+            <button class="ui inverted button" id="atlusRed" onclick="welcomeUser()">
+              Who are you? <i class="user icon"></i>
+            </button>
+          </div>
+          <div id="readmore" class="ui inverted message">
+            <p>
+              This web app is intended to show users a list of the different subgeneres of RPG's 
+              and games of those subgeneres. It will also allow the user to add and remove subgeneres and games.
+            </p>
+          </div>
+          <div
+            id="welcomeuser"
+            class="ui inverted message"
+            onclick="hideWelcome()"
+          ></div>
+        </div>
+      </section>
+    </section>
+    {{> trademark}}
+        
+

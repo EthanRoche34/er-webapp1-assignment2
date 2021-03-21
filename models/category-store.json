@@ -1,0 +1,70 @@
+{
+  "categoryCollection": [
+    {
+      "id": "01",
+      "title": "JRPG",
+      "games": [
+        {
+          "id": "04",
+          "title": "Final Fantasy 7 Remake",
+          "developer": "Square Enix",
+          "release": "April 10, 2020"
+        },
+        {
+          "id": "05",
+          "title": "Final Fantasy XV",
+          "developer": "Square Enix",
+          "release": "November 29, 2016"
+        },
+        {
+          "id": "06",
+          "title": "Persona 5 Royal",
+          "developer": "Atlus Games",
+          "release": "March 31, 2020"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Action RPGs",
+      "games": [
+        {
+          "id": "07",
+          "title": "The Witcher 3: Wild Hunt",
+          "developer": "CD Projekt RED",
+          "release": "May 18, 2015"
+        },
+        {
+          "id": "08",
+          "title": "Nier Automata",
+          "developer": "PlatinumGames",
+          "release": "February 23, 2017"
+        },
+        {
+          "id": "09",
+          "title": "Bloodborne",
+          "developer": "FromSoftware, Inc",
+          "release": "March 24, 2015"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Roguelikes",
+      "games": [
+        {
+          "id": "10",
+          "title": "Hades",
+          "developer": "Supergiant Games",
+          "release": "September 17, 2020"
+        },
+        {
+          "id": "11",
+          "title": "Crypt of the NecroDancer",
+          "developer": "Brace Yourself Games",
+          "release": "April 23, 2015"
+        }
+      ]
+    }
+  ]
+}

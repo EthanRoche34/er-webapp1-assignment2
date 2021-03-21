@@ -1,0 +1,13 @@
+{"studio":
+  [
+    {
+      "name":"Totally Real Studios",
+      "image":"https://i.imgur.com/fZhmeEr.png", 
+      "founded":2016,
+      "city":"Japan",
+      "employees":20,
+      "email":"totallyreal@studios.net",
+      "phone":123456789
+    }
+  ]
+}

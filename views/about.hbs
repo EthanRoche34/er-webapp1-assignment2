@@ -1,0 +1,25 @@
+{{> menu id="about"}}
+
+<section class="ui center aligned middle aligned segment">
+  <h2 class="ui header">
+    The RPG Archives Studio:
+  </h2>
+  <div class="ui grid">
+
+    <div class="ui six wide column">
+      <div class="ui centered cards">
+        {{#each studio}}
+        {{> card}}
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="ui right aligned ten wide column">
+      <figure id="map">
+        <img src="https://i.imgur.com/wdcoIo6.png">
+        <figcaption>Address: Japan, 〒160-8430 Tokyo, Shinjuku City, Shinjuku, 6 Chome−27−３０号 新宿イーストサイドスクエア</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+{{> trademark}}

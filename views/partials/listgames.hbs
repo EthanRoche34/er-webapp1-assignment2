@@ -1,0 +1,38 @@
+<table class="ui fixed inverted striped table">
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Developer</th>
+      <th>Release Date</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each category.games}}
+      <tr>
+        <td>
+          {{title}}
+        </td>
+        <td>
+          {{developer}}
+        </td>
+        <td>
+          {{release}}
+        </td>
+        <td>
+          <a href="/category/{{../category.id}}/deletegame/{{id}}" class="ui inverted icon button delgame">
+            <i class="icon trash"></i>
+          </a>        
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<p>
+  <span id="rating"> </span>
+</p>
+
+<button class="ui blue button" onclick="getRating()">
+  Rate it! <i class="star icon"></i>
+</button>
