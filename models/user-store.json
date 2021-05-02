@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "firstName": "Ethan",
+      "lastName": "Roche",
+      "email": "test123@test.com",
+      "password": "Testing123",
+      "id": "85cb59b6-4755-43b4-a467-f939e10e3e05",
+      "picture": "http://res.cloudinary.com/eroche/image/upload/v1619979742/asdzldiczgwhd7yzzomv.png"
+    }
+  ]
+}

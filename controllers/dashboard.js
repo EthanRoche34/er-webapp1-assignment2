@@ -4,6 +4,7 @@
 const logger = require('../utils/logger');
 const categoryStore = require('../models/category-store.js');
 const uuid = require('uuid');
+const accounts = require('./accounts.js');
 
 // create dashboard object
 const dashboard = {
@@ -14,15 +15,21 @@ const dashboard = {
     // display confirmation message in log
     logger.info('dashboard rendering');
 
-    // create view data object (contains data to be sent to the view e.g. page title)
-    const viewData = {
-      title: 'RPG Archives App Dashboard',
-      categories: categoryStore.getAllcategories(),
-    };
+    const loggedInUser = accounts.getCurrentUser(request);
+    if (loggedInUser) {
+      // create view data object (contains data to be sent to the view e.g. page title)
+      const viewData = {
+        title: 'RPG Archives App Dashboard',
+        categories: categoryStore.getUserCategories(loggedInUser.id),
+        fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        picture: loggedInUser.picture
+      };
 
-    // render the dashboard view and pass through the data
-    logger.info('about to render', viewData.categories);
-    response.render('dashboard', viewData);
+      // render the dashboard view and pass through the data
+      logger.info('about to render' + viewData.categories);
+      response.render('dashboard', viewData);
+    }
+    else response.redirect('/');
   },
   deleteCategory(request, response) {
     const categoryId = request.params.id;
@@ -30,18 +37,23 @@ const dashboard = {
     categoryStore.removeCategory(categoryId);
     response.redirect('/dashboard');
   },
-  
-    addCategory(request, response) {
+
+  addCategory(request, response) {
+    const date = new Date();
+    const loggedInUser = accounts.getCurrentUser(request);
     const newCategory = {
       id: uuid(),
+      userid: loggedInUser.id,
       title: request.body.title,
-      games: [],
+      picture: request.files.picture,
+      date: date,
+      games: []
     };
-    categoryStore.addCategory(newCategory);
-    response.redirect('/dashboard');
-  },
-  
-};
-
+    logger.debug('Creating a new Category' + newCategory);
+    categoryStore.addCategory(newCategory, function () {
+      response.redirect('/dashboard');
+    });
+  }
+}
 // export the dashboard module
 module.exports = dashboard;

@@ -17,7 +17,7 @@ h1 {
 #readmore {
   display: none;
 }
-#welcomeuser {
+#userstats {
   display: none;
 }
 .ui.segment {
@@ -44,7 +44,7 @@ h2 {
 #map figcaption{
   text-align: center;
 }
-#dashboard,#about {
+.ui.menu .item {
   color: #f0f0f0;
 }
 .ui.button#atlusBlue {
@@ -69,9 +69,41 @@ h2 {
   color: #fff;
   box-shadow: none!important;
 }
-h2.ui.header {
+h2.ui.header,h3.ui.header {
   color: #f0f0f0;
 }
 .ui.form .field>label {
   color: #f0f0f0;
+}
+.ui.statistic>.value, .ui.statistics .statistic>.value#atlusRed,.ui.statistic>.label, .ui.statistics .statistic>.label#atlusRed{
+  color: #E70012;
+}
+.ui.statistic>.value, .ui.statistics .statistic>.value#atlusBlue,.ui.statistic>.label, .ui.statistics .statistic>.label#atlusBlue{
+  color: #125FAD;
+}
+.name{
+  padding-top:20px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+.ui.menu .active.item {
+  color: rgb(255, 136, 0);
+}
+.ui.link.menu .item:hover, .ui.menu .dropdown.item:hover, .ui.menu .link.item:hover, .ui.menu a.item:hover {
+  color: goldenrod !important;
+}
+.ui.cards>.card {
+  background-color: #e3e0cf;
+  color: slategray;
+}
+.ui.cards>.card#games{
+  background-color: slategray;
+}
+.profilepic{
+  padding-top:15px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
 }

@@ -7,21 +7,12 @@ function showHide() {
     readMoreDiv.style.display = "block";
   }
 }
-function welcomeUser() {
-  let username = prompt("What's your name?");
-  let welcomeUserDiv = document.getElementById("welcomeuser");
-  welcomeUserDiv.style.display = "block";
-  document.getElementById("welcomeuser").innerHTML =
-    "<p> Hello, " +
-    username +
-    ", We hope you enjoy this app! Click this message to close it.</p>";
-  welcomeUserDiv.style.cursor = "pointer";
-}
-
-function hideWelcome() {
-  let welcomeUserDiv = document.getElementById("welcomeuser");
-  if (welcomeUserDiv.style.display === "block") {
-    welcomeUserDiv.style.display = "none";
+function userStats() {
+  let userStatsDiv = document.getElementById("userstats");
+  if (userStatsDiv.style.display === "block") {
+    userStatsDiv.style.display = "none";
+  } else {
+    userStatsDiv.style.display = "block";
   }
 }
 
@@ -40,12 +31,3 @@ function getRating() {
 
 $(".delgame").click(() => confirm('Really delete this game?'))
 $(".delcategory").click(() => confirm('Really delete this category?'))
-
-$(function(){  //Based on code from https://www.codexworld.com/add-datepicker-to-input-field-jquery-ui/
-  $("#datepicker").datepicker({
-      dateFormat: "MM d, yy", 
-      changeMonth: true,
-      changeYear: true,
-      yearRange: "-40:+40"
-  });
-});

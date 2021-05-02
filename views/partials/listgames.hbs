@@ -1,38 +1,62 @@
-<table class="ui fixed inverted striped table">
-  <thead>
-    <tr>
-      <th>Game</th>
-      <th>Developer</th>
-      <th>Release Date</th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each category.games}}
-      <tr>
-        <td>
-          {{title}}
-        </td>
-        <td>
-          {{developer}}
-        </td>
-        <td>
-          {{release}}
-        </td>
-        <td>
-          <a href="/category/{{../category.id}}/deletegame/{{id}}" class="ui inverted icon button delgame">
-            <i class="icon trash"></i>
-          </a>        
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+{{#unless category.games}}
+<h2 class="ui inverted center aligned message">Thank you, but there's no games in this castle!<br> Try adding some games to this category</h2>
+{{/unless}}
+{{#if category.games}}
+
+<div class="ui centered cards">
+  {{#each category.games}}
+  <div class="ui card" id="games">
+    <div class="image">
+      <img src="{{picture}}">
+    </div>
+    <form class="ui form" action="/category/{{../category.id}}/updategame/{{id}}" method="POST"
+      enctype="multipart/form-data">
+      <div class="content">
+        <div class="field">
+          <div class="ui small labeled input">
+            <div class="ui label">
+              Game Title:
+            </div>
+            <input type="text" name="title" autofocus required title="Please include a valid title" placeholder="Title"
+              value="{{capitalise title}}">
+          </div>
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="field">
+          <div class="ui small labeled input">
+            <div class="ui label">
+              Developer:
+            </div>
+            <input type="text" name="developer" autofocus required title="Please include a valid developer"
+              placeholder="Developer" value="{{capitalise developer}}">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui small labeled input">
+            <div class="ui label">
+              Release Date:
+            </div>
+            <input type="date" name="release" required title="Please include a release date" placeholder="Release Date"
+              value="{{release}}">
+          </div>
+        </div>
+      </div>
+      <button class="ui submit icon button"><i class="icon pencil alternate"></i></button>
+      <a href="/category/{{../category.id}}/deletegame/{{id}}" class="ui inverted icon button delgame">
+        <i class="icon trash"></i>
+      </a>
+    </form>
+  </div>
+  {{/each}}
+</div>
 
 <p>
-  <span id="rating"> </span>
+<div id="rating"> </div>
 </p>
 
 <button class="ui blue button" onclick="getRating()">
   Rate it! <i class="star icon"></i>
 </button>
+
+{{/if}}
